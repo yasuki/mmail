@@ -1,0 +1,22 @@
+    <div ng-controller="mailListCtrl">
+        <div class="alert alert-info" ng-show="Mails.length < 1">
+            <span>no mail.</span>
+        </div>
+        <div class="list-group">
+            Inbox<br>
+            Mails: {{Mails}}<br>
+            length: {{Mails.length}}<br>
+            <a class="list-group-item" ng-repeat="item in Mails" ng-click="show(item)">
+                <div>
+                    {{item}}<br>
+                    <p class="list-item-count">        {{Mails.length}}     </p>
+                    <p class="list-item-recieve_time"> {{item.recieveDate}}</p>
+                    <p class="list-item-recieve_time"> {{item.RecieveTime}}</p>
+                    <p class="list-item-from_name">    {{item.From_name}}  </p>
+                    <p class="list-item-from_name">    {{item.toList}}     </p>
+                    <p class="list-item-subject" >     {{item.subject}}    </p>
+                </div>
+            </a>
+        </div>
+   </div>
+
